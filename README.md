@@ -23,7 +23,7 @@ The local server binds to http://127.0.0.1:4173. Build output is generated in ig
 - `scripts/build.mjs`: static HTML, text resources and self-contained Cloudflare Worker.
 - `scripts/sync-page-plan.mjs`: regenerates the maintained URL and keyword plan with `npm run plan`.
 
-The Hajin view combines an explicitly illustrative concept schematic with a searchable, paginated directory of 13 official points of interest, regions and initial AI threat levels. It is not a geographic navigation map. Seven named weapons are listed from official FOB guidance; no unsupported damage, ranking or attachment statistics are invented. Four mission categories and source-confirmed extraction instructions are available. The official video loads an embedded privacy-enhanced YouTube player after a click; chapter links open the original video. Embedded playback remains subject to YouTube regional and browser restrictions.
+The Hajin view combines an explicitly illustrative concept schematic with a searchable, paginated directory of 13 official points of interest, regions and initial AI threat levels. It is not a geographic navigation map. Seven named weapons are listed from official FOB guidance; no unsupported damage, ranking or attachment statistics are invented. Four mission categories and source-confirmed extraction instructions are available. The official video shows a locally packaged, source-credited frame as its cover and loads an embedded privacy-enhanced YouTube player after a click; chapter links open the original video. Cover bytes are fingerprinted and served as a binary PNG by the Worker. Embedded playback remains subject to YouTube regional and browser restrictions.
 
 ## Publication and updates
 

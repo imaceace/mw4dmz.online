@@ -2,7 +2,7 @@
 
 The home page answers what DMZ MW4 is, identifies the announced Early Access date and gives a map-first entry alongside access instructions. It distinguishes Modern Warfare 4 from Call of Duty 4 (2007) and historical Warzone DMZ. Deep guides own map, weapon, mission and extraction intents instead of stacking a database on the homepage.
 
-Visual direction: original dark tactical field notes, olive navigation and orange action accents. No copied game screenshot, logo asset or fabricated gameplay image. The abstract Hajin motif is decorative; the interactive location schematic warns that markers do not express geography, distance or exfil coordinates. Actual navigation belongs to the game map.
+Visual direction: original dark tactical field notes, olive navigation and orange action accents. No copied logo asset or fabricated gameplay image. The video card uses a source-credited frame from the actual official video. The abstract Hajin motif is decorative; the interactive location schematic warns that markers do not express geography, distance or exfil coordinates. Actual navigation belongs to the game map.
 
 Shared navigation links to important routes. Dropdowns support hover, pointer travel into the menu, click, keyboard focus and Escape. Language links preserve the current topic. Weapon search and class filtering operate locally, expose a live result count and show a specific empty state. Mission cards describe types rather than fabricate unverified quest walkthroughs.
 

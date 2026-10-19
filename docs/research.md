@@ -69,3 +69,60 @@ Additional PAA item: “Is Modern Warfare 4 going to have a DMZ mode?” No dest
 ### Playback and keyframe hard stop
 
 Opened official video `qmkmQ1AWPVE` in isolated OpenCLI browser session `mw4-research`; the next state read returned a Google unusual-traffic page at `google.com/sorry` with a reCAPTCHA challenge, timestamp 2026-10-19T06:04:54Z. Related video and Google automation stopped immediately. The challenge tab was preserved for the user; no attempt was made to solve/bypass it or switch routes to evade it. Human completion is required before playback, transcript or browser-frame capture can continue. No keyframes were obtained, so none may be republished or described as observed footage. The other session `mw4-domain` was untouched.
+
+## Resumed browser research after human verification
+
+This section supersedes the earlier playback-blocked status and supplements the initial adapter result. On 19 October 2026, after the user completed CAPTCHA, the official video loaded and played. Browser readback showed a 1280×720 video, readyState 4, duration 2343.861 seconds (39:03), with currentTime advancing. This verifies playback in this browser session, not on every device or inside the site's iframe.
+
+### Locally captured frame observations
+
+Browser screenshots of paused frames were visually inspected and retained only in ignored `.local/video-review/`. These are sampled review frames, not a full-video analysis or automatically selected editorial keyframes. Filenames describe the intended seek chapter; exact observed times below govern their interpretation.
+
+| Exact video time | Local evidence | Observation and limit |
+| --- | --- | --- |
+| 01:07.360 | frame-opening.png | First-person weapon view in a dark interior beside Korean advertising signs. It does not identify a surveyed map coordinate. |
+| 10:48.287 | frame-hajin.png | Six-person studio panel; a translation-extension login overlay obscures part of the player. No useful map or tactical evidence can be inferred. |
+| 28:25.790 | frame-fob.png | Close-up of a panel speaker during the escalating-threats chapter. No FOB interface or exact unlock requirement is visible. |
+| 31:39.641 | frame-extraction.png | Studio panel in the bounty chapter; no extraction-location footage. Use October official text for precise mechanics. |
+
+The player was paused after each capture. No media file was downloaded, no access control bypassed and no copyrighted frame was copied into public site assets. A supported transcript adapter attempt failed with Navigation rejected; no full transcript was obtained. Visible player captions and chapter labels alone do not establish a complete verified transcript. Recommended blog angle remains a sourced introduction to official systems with an embedded interview, not a tested route/weapon review.
+
+### Direct Google result-card audit
+
+Query `Call of Duty Modern Warfare 4 DMZ`, Google browser pages with `hl=en`, offsets `start=0`, `10`, `20`; reviewed in the existing signed-in Chrome profile on 19 October 2026. Region was not explicitly selected. Results changed from the earlier adapter snapshot. Each line below is a visible heading-link card (`a:has(h3)`) in DOM order. Page 1 exposed eight cards, page 2 ten, and the first two of page 3 were recorded, giving **20 observed result cards**. They are not certified organic ranks 1–20: modules may occupy other positions, and duplicate URLs are preserved. Source depth is stated per row; newly discovered cards were not all opened. Do not call these twenty distinct sites or twenty fully audited articles.
+
+| Card | Page / order | Source and individual assessment |
+| --- | --- | --- |
+| 1 | 1 / 1 | [Official DMZ](https://www.callofduty.com/modernwarfare4/dmz): primary overview, fully text-reviewed earlier as S01. |
+| 2 | 1 / 2 | [Official Story Missions video](https://www.youtube.com/watch?v=jJ35S0s1Gtw): Call of Duty video card; metadata only, relevant future mission-video review. |
+| 3 | 1 / 3 | [Reddit: What is DMZ?](https://www.reddit.com/r/modernwarfare4/comments/1x25ymb/what_is_dmz_i_never_really_try_it_before/): question card validates beginner explanation intent; community content unreviewed. |
+| 4 | 1 / 4 | [Official Hajin guide](https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-dmz-deep-dive-hajin): primary terrain/exfil guide, text-reviewed as S03. |
+| 5 | 1 / 5 | [Fandom DMZ](https://callofduty.fandom.com/wiki/DMZ/Modern_Warfare_4): competing encyclopedia taxonomy; card only, no interaction conclusions. |
+| 6 | 1 / 6 | [Steam MW4](https://store.steampowered.com/app/4435490/Call_of_Duty_Modern_Warfare_4/): official PC purchase destination; card only, regional pricing untested. |
+| 7 | 1 / 7 | [Xbox UK Facebook access post](https://www.facebook.com/xboxuk/posts/get-access-to-call-of-duty-modern-warfare-4s-new-dmz-mode-early-heres-everything/1459881749575584/): publisher social access announcement; card only, use official blog for terms. |
+| 8 | 1 / 8 | [PlayStation MW4](https://www.playstation.com/en-us/games/call-of-duty-modern-warfare-4/): platform product destination; card only, console-specific requirements need separate check. |
+| 9 | 2 / 1 | [IGN Benelux trailer](https://nl.ign.com/call-of-duty-2026/167698/call-of-duty-modern-warfare-4-official-dmz-early-access-gameplay-trailer): October 9 trailer card; prefer original official embed. |
+| 10 | 2 / 2 | [Xbox Wire five features](https://news.xbox.com/en-us/2026/10/09/dmz-5-features-get-excited-for-mw4/): approachable systems overview, text-reviewed as S06. |
+| 11 | 2 / 3 | [Wikipedia MW4](https://en.wikipedia.org/wiki/Call_of_Duty:_Modern_Warfare_4): broad context, reviewed as S19; not primary mechanics authority. |
+| 12 | 2 / 4 | [Reddit deep dive](https://www.reddit.com/r/DMZ/comments/1tykpdn/mw_4_dmz_deep_dive/): community discussion card; questions may guide FAQs, claims need primary confirmation. |
+| 13 | 2 / 5 | [Official June DMZ deep dive](https://www.callofduty.com/blog/2026/06/call-of-duty-modern-warfare-4-dmz-deep-dive): early publisher overview card; newer October documentation governs conflicts. |
+| 14 | 2 / 6 | [Esports.gg solo guide](https://esports.gg/guides/call-of-duty/can-you-play-modern-warfare-4-dmz-solo/): narrow solo-play intent card; official S01 already confirms solo support. |
+| 15 | 2 / 7 | [YouTube DMZ playlist](https://www.youtube.com/playlist?list=PLAJeAB3dBICM): video discovery card; full playlist membership not reviewed. |
+| 16 | 2 / 8 | [GameStar campaign video](https://www.gamestar.de/videos/die-kampagne-von-call-of-duty-modern-warfare-4-bricht-mit-wirklich-allem,142452.html): campaign topic is adjacent; omit from core DMZ gameplay reference. Card only. |
+| 17 | 2 / 9 | [Xbox UK Instagram](https://www.instagram.com/reel/DemQabViGXu/): publisher early-access reel card; not a substitute for written eligibility conditions. |
+| 18 | 2 / 10 | [GameRant access times](https://gamerant.com/call-of-duty-cod-modern-warfare-4-mw4-dmz-early-access-start-times/): timing-intent card; exact hours require primary-source confirmation. |
+| 19 | 3 / 1 | [Reddit official gameplay discussion](https://www.reddit.com/r/DMZ/comments/1wye45f/official_dmz_gameplay_in_modern_warfare_4/): discussion card, not direct gameplay verification. |
+| 20 | 3 / 2 | [PlayStation Asia trailer](https://www.youtube.com/watch?v=mEql7vA4Vhs): platform-channel video card; metadata only, no playback or frame claim. |
+
+Combined Google insight: identity, early access, solo play and official footage are prominent intents alongside encyclopedic reference. Preserve those clear entry points; avoid mixing campaign commentary and speculation into maps or mission objectives. The original twenty-source official-first research register remains the factual editorial basis.
+
+## Public briefing cover asset
+
+The user explicitly requested an actual video frame as the persistent briefing cover. This product resource is intentionally tracked separately from local QA screenshots.
+
+- Product path: `src/assets/dmz-video-cover.png`; PNG, 896×504 (16:9), 209,819 bytes.
+- Source: [DMZ First Look / COD POD Ep. 11](https://www.youtube.com/watch?v=qmkmQ1AWPVE&t=67s), video ID `qmkmQ1AWPVE`; publisher Call of Duty, featuring Infinity Ward; gameplay/trademarks belong to Activision and their respective owners.
+- Exact observed paused time: **01:07.360** (67.360011 seconds). Scene: first-person rifle in a dark interior beside Korean advertising signs.
+- Derivation: deterministic pixel crop `(380, 91, 1276, 595)` from the inspected browser screenshot `.local/video-review/frame-opening.png`; no AI reconstruction, retouching, upscaling or downloaded media file. The crop removes browser interface, player controls and subtitles while retaining actual displayed gameplay pixels.
+- Use: a contextual cover linking to the same embedded official interview, with visible publisher attribution and the 01:07 timestamp. This is a limited editorial source excerpt requested for this product, not an assertion that Activision has granted a general asset license. Do not offer the frame as a reusable download, remove source credit or use it to imply affiliation.
+- The earlier statement that sampled frames are not public assets remains true for the full local screenshots; this separately registered crop is the sole requested product cover exception. Screenshot evidence stays ignored in `.local/`.
