@@ -6,9 +6,9 @@ Canonical origin: https://mw4dmz.online. Public support address: support@mw4dmz.
 
 Run `npm run build` and `npm test`, complete desktop/mobile and interaction review, then inspect the exact staged file list and new file sizes. Commit only source, reusable checks, configuration, and maintained documentation. `.local/`, `dist/`, credentials, screenshots, captured HTML, and generated reports are ignored.
 
-Push the reviewed release commit to the selected GitHub `main` branch. Confirm `git ls-remote origin refs/heads/main` equals `git rev-parse HEAD` and `git status --porcelain` is empty before deployment. Build from that clean commit. Reuse a configured Git automatic deployment when available; no existing pipeline was found in this new repository.
+Push the reviewed release commit to the selected GitHub `main` branch. Confirm `git ls-remote origin refs/heads/main` equals `git rev-parse HEAD` and `git status --porcelain` is empty before deployment. Build from that clean commit. Production uses Cloudflare Workers Builds connected to `imaceace/mw4dmz.online`, watching `main`. The root directory is `/`, the build command is `npm run build && npm test`, and the deploy command is `npx wrangler deploy`. All paths trigger builds; preview builds are disabled. Cloudflare stores the existing build credential; no token is stored in this repository.
 
-Use the Cloudflare MCP to upload `dist/worker.mjs` as the ES module `worker.mjs`, with `main_module: worker.mjs` and the compatibility date from `wrangler.jsonc`. Record the returned version/deployment identity. Keep workers.dev and preview URLs disabled. Bind both mw4dmz.online and www.mw4dmz.online to the production Worker only after the source release gate passes.
+Push starts the production build from the committed GitHub source. Confirm the build commit matches the pushed release SHA, wait for successful build and deployment, then record its build UUID and deployed Worker version. A failed build or test must prevent deployment. Manual MCP uploads are a recovery path only after the same source release gate. Keep workers.dev and preview URLs disabled. Bind both mw4dmz.online and www.mw4dmz.online to the production Worker only after the source release gate passes.
 
 ## Domain migration
 
