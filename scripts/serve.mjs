@@ -1,0 +1,12 @@
+import {createServer} from 'node:http';
+import {readFile} from 'node:fs/promises';
+import {resolve} from 'node:path';
+import {currentAssetRevision} from './asset-revision.mjs';
+import {renderPage,setAssetRevision} from '../src/render.mjs';
+import {ROUTES} from '../src/config.mjs';
+import {LANGS,pathFor} from '../src/config.mjs';
+import {searchData} from '../src/render.mjs';
+const routes={};for(const l of Object.keys(LANGS))for(const p of ROUTES)routes[pathFor(l,p)]={l,p};
+const port=Number(process.env.PORT||4173);
+setAssetRevision(await currentAssetRevision());
+createServer(async(req,res)=>{try{const u=new URL(req.url,'http://localhost');let route=routes[u.pathname];if(!route&&routes[u.pathname+'/']){res.writeHead(308,{Location:u.pathname+'/'+u.search});res.end();return}if(route){res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});res.end(renderPage(route.l,route.p));return}const index=u.pathname.match(/^\/search-index\.(en|zh|fr|it|ko|ja)\.json$/);if(index){res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'});res.end(JSON.stringify(searchData(index[1])));return}if(u.pathname.startsWith('/assets/')||['/favicon.svg','/robots.txt','/sitemap.xml','/llms.txt'].includes(u.pathname)){const safe=u.pathname.startsWith('/assets/')?resolve('src','.'+u.pathname):resolve('dist','.'+u.pathname);if(u.pathname.includes('..'))throw new Error('path');const body=await readFile(safe);const ext=u.pathname.split('.').at(-1);res.writeHead(200,{'Content-Type':{css:'text/css; charset=utf-8',js:'text/javascript; charset=utf-8',svg:'image/svg+xml',xml:'application/xml',txt:'text/plain; charset=utf-8'}[ext]||'application/octet-stream'});res.end(body);return}res.writeHead(404,{'Content-Type':'text/html; charset=utf-8'});res.end(renderPage('en','home',true))}catch{res.writeHead(404);res.end('Not found')}}).listen(port,'127.0.0.1',()=>console.log(`DMZ MW4 Wiki: http://127.0.0.1:${port}`));

@@ -1,0 +1,7 @@
+import {writeFile} from 'node:fs/promises';
+import {SITE,LANGS,ROUTES,pathFor} from '../src/config.mjs';
+import {pageMeta} from '../src/render.mjs';
+let text='# Page and keyword plan\n\nOne route per player task, localized across six languages. English is the default at the domain root. Privacy and terms are noindex; all other pages are indexable. Observations in Search Console must be filtered by exact canonical page, date range, country and device. No ranking or indexing claim is made.\n\n| URL | Core phrase / group | Player result | Boundary | Index |\n|---|---|---|---|---|\n';
+const groups={home:'DMZ MW4 / MW4 DMZ / Modern Warfare 4 DMZ',map:'DMZ MW4 map / Hajin map',weapons:'DMZ MW4 weapons / weapons database',missions:'DMZ MW4 missions / mission guide',extraction:'DMZ MW4 extraction / exfil guide',start:'how to play DMZ MW4 / early access',videos:'DMZ MW4 video / COD POD',sources:'DMZ MW4 sources / official information',privacy:'Privacy',terms:'Terms'};
+for(const l of Object.keys(LANGS))for(const p of ROUTES){const m=pageMeta(l,p);text+=`| ${SITE+pathFor(l,p)} | ${groups[p]} (${l}) | ${m.desc.replaceAll('|','/')} | ${p==='home'?'Overview; link to deeper tasks':p+' only; no legacy-game assumptions'} | ${['privacy','terms'].includes(p)?'noindex':'index'} |\n`}
+await writeFile('docs/page-plan.md',text);console.log('Updated docs/page-plan.md');

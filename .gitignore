@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.local/
+.env
+.env.*
+!.env.example
+.wrangler/
+playwright-report/
+test-results/
+progress.md
+.rankup/skill-state.json

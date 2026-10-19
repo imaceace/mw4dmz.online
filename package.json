@@ -1,0 +1,1 @@
+{"name":"mw4dmz-wiki","version":"1.0.0","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node scripts/check.mjs","dev":"node scripts/serve.mjs","plan":"node scripts/sync-page-plan.mjs"},"engines":{"node":">=20"}}
