@@ -118,11 +118,11 @@ Combined Google insight: identity, early access, solo play and official footage 
 
 ## Public briefing cover asset
 
-The user explicitly requested an actual video frame as the persistent briefing cover. This product resource is intentionally tracked separately from local QA screenshots.
+The site owner supplied the preferred cover image and explicitly requested that it replace the earlier sampled video frame. This product resource is intentionally tracked separately from local QA screenshots.
 
-- Product path: `src/assets/dmz-video-cover.png`; PNG, 896×504 (16:9), 209,819 bytes.
-- Source: [DMZ First Look / COD POD Ep. 11](https://www.youtube.com/watch?v=qmkmQ1AWPVE&t=67s), video ID `qmkmQ1AWPVE`; publisher Call of Duty, featuring Infinity Ward; gameplay/trademarks belong to Activision and their respective owners.
-- Exact observed paused time: **01:07.360** (67.360011 seconds). Scene: first-person rifle in a dark interior beside Korean advertising signs.
-- Derivation: deterministic pixel crop `(380, 91, 1276, 595)` from the inspected browser screenshot `.local/video-review/frame-opening.png`; no AI reconstruction, retouching, upscaling or downloaded media file. The crop removes browser interface, player controls and subtitles while retaining actual displayed gameplay pixels.
-- Use: a contextual cover linking to the same embedded official interview, with visible publisher attribution and the 01:07 timestamp. This is a limited editorial source excerpt requested for this product, not an assertion that Activision has granted a general asset license. Do not offer the frame as a reusable download, remove source credit or use it to imply affiliation.
-- The earlier statement that sampled frames are not public assets remains true for the full local screenshots; this separately registered crop is the sole requested product cover exception. Screenshot evidence stays ignored in `.local/`.
+- Product path: `src/assets/dmz-video-cover.png`; PNG, 2300×1275, 1,271,135 bytes. Source file: owner-provided clipboard image supplied during this task.
+- Handling: copied unchanged, with matching SHA-256 hashes before and after copying. No AI edits, crop, resize, retouching or format conversion were applied. The player retains a 16:9 presentation using CSS `object-fit: cover`; the stored original bytes remain unchanged.
+- Scene: first-person rifle view into a blue/teal-lit interior room and corridor, with the supplied subtitle visible at the bottom. The exact original video timestamp and provenance of this particular supplied frame have not been independently verified. Do not label it as the earlier 01:07.360 capture.
+- The separate embedded video remains [DMZ First Look / COD POD Ep. 11](https://www.youtube.com/watch?v=qmkmQ1AWPVE), published by Call of Duty and featuring Infinity Ward. Visible attribution names this video without asserting a matching timestamp for the supplied cover. Chapters and original-video fallback links remain unchanged.
+- Previous cover: the deterministic 896×504 crop from the verified 01:07.360 gameplay frame is no longer published. It is retained only as ignored local research at `.local/video-review/previous-public-cover.png`; the full source screenshot remains `.local/video-review/frame-opening.png`.
+- The user-provided image is used only as the requested contextual briefing cover. No general reuse license or publisher affiliation is claimed. Do not offer it as a standalone asset download.

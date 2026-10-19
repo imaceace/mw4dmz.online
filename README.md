@@ -23,7 +23,7 @@ The local server binds to http://127.0.0.1:4173. Build output is generated in ig
 - `scripts/build.mjs`: static HTML, text resources and self-contained Cloudflare Worker.
 - `scripts/sync-page-plan.mjs`: regenerates the maintained URL and keyword plan with `npm run plan`.
 
-The Hajin view combines an explicitly illustrative concept schematic with a searchable, paginated directory of 13 official points of interest, regions and initial AI threat levels. It is not a geographic navigation map. Seven named weapons are listed from official FOB guidance; no unsupported damage, ranking or attachment statistics are invented. Four mission categories and source-confirmed extraction instructions are available. The official video shows a locally packaged, source-credited frame as its cover and loads an embedded privacy-enhanced YouTube player after a click; chapter links open the original video. Cover bytes are fingerprinted and served as a binary PNG by the Worker. Embedded playback remains subject to YouTube regional and browser restrictions.
+The Hajin view combines an explicitly illustrative concept schematic with a searchable, paginated directory of 13 official points of interest, regions and initial AI threat levels. It is not a geographic navigation map. Seven named weapons are listed from official FOB guidance; no unsupported damage, ranking or attachment statistics are invented. Four mission categories and source-confirmed extraction instructions are available. The official video shows the owner-supplied image as its cover, with separate attribution to the embedded video and loads an embedded privacy-enhanced YouTube player after a click; chapter links open the original video. Cover bytes are fingerprinted and served as a binary PNG by the Worker. Embedded playback remains subject to YouTube regional and browser restrictions.
 
 ## Publication and updates
 
@@ -34,3 +34,4 @@ Use the account’s existing authorized Cloudflare deployment flow with `wrangle
 Google Analytics 4 uses the user-supplied measurement ID `G-LBK736WMGX` in the shared layout. Its privacy disclosure is translated. No unrelated tracking ID remains. Page request transmission and Google’s reporting receipt must be verified separately; tracking protection may suppress collection. This site does not request game credentials, accept payments, provide accounts or invoke paid AI models. Search Console verification and sitemap submission require the property’s actual authorization; no placeholder verification is shipped.
 
 Refer to [page plan](docs/page-plan.md), [design decisions](docs/design.md) and project deployment notes for handoff. Fact sources are visible on the public sources page and linked in the guides.
+
