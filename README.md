@@ -18,12 +18,15 @@ The local server binds to http://127.0.0.1:4173. Build output is generated in ig
 
 - `src/config.mjs`: single origin, support email, route and language configuration.
 - `src/content.mjs`: localized content, confirmed weapon records and source-based gameplay details.
+- `src/guides.mjs`: localized Stranded container/bunker codes and separate campaign/DMZ early-access guides, with source attribution and timing limits.
 - `src/render.mjs`: shared header, footer, guides, SEO, source links and video cards.
 - `src/assets/`: original CSS schematic art, interaction code and favicon.
 - `scripts/build.mjs`: static HTML, text resources and self-contained Cloudflare Worker.
 - `scripts/sync-page-plan.mjs`: regenerates the maintained URL and keyword plan with `npm run plan`.
 
 The Hajin view combines an explicitly illustrative concept schematic with a searchable, paginated directory of 13 official points of interest, regions and initial AI threat levels. It is not a geographic navigation map. Seven named weapons are listed from official FOB guidance; no unsupported damage, ranking or attachment statistics are invented. Four mission categories and source-confirmed extraction instructions are available. The official video shows the owner-supplied image as its cover, with separate attribution to the embedded video and loads an embedded privacy-enhanced YouTube player after a click; chapter links open the original video. Cover bytes are fingerprinted and served as a binary PNG by the Worker. Embedded playback remains subject to YouTube regional and browser restrictions.
+
+The `/mw4-stranded-codes/`, `/mw4-dmz-early-access/` and `/mw4-campaign-early-access/` routes also have complete localized editions. The codes reference covers six containers and two hidden bunker doors; it does not claim all safe or achievement requirements are verified. Access guides distinguish official dates from media-reported hours and unknown platform-specific timing. The DMZ countdown is explicitly predictive; at zero it asks players to check official availability. See [the October 20 source review](docs/content-research-2026-10-20.md) for each Google result, conflicts and video/transcript limits. `node scripts/keyword-diagnostics.mjs` writes body-only phrase and n-gram diagnostics to ignored `.local/diagnostics/`.
 
 ## Publication and updates
 

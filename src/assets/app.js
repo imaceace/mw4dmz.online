@@ -10,3 +10,21 @@ document.querySelectorAll('.video-poster').forEach(img=>img.addEventListener('er
 
 
 document.querySelectorAll('[data-video-reset]').forEach(button=>button.addEventListener('click',()=>{const wrapper=button.parentElement.previousElementSibling;wrapper.querySelector('iframe')?.remove();wrapper.classList.remove('loaded');button.hidden=true;wrapper.querySelector('[data-play]').focus()}));
+
+document.querySelectorAll('[data-countdown]').forEach(timer=>{
+ const target=Date.parse(timer.dataset.countdown);
+ if(!Number.isFinite(target))return;
+ const clock=timer.querySelector('.countdown-clock'),parts=[...timer.querySelectorAll('[data-countdown-part]')],status=timer.querySelector('[data-countdown-status]');
+ const local=timer.querySelector('[data-countdown-local]');
+ local.textContent=new Intl.DateTimeFormat(document.documentElement.lang,{dateStyle:'full',timeStyle:'long'}).format(target);
+ local.parentElement.hidden=false;
+ const update=()=>{
+  const remaining=Math.max(0,Math.ceil((target-Date.now())/1000));
+  const values=[Math.floor(remaining/86400),Math.floor(remaining/3600)%24,Math.floor(remaining/60)%60,remaining%60];
+  parts.forEach((part,n)=>part.textContent=String(values[n]).padStart(2,'0'));
+  clock.hidden=false;
+  if(remaining===0){status.textContent=timer.dataset.reached;timer.classList.add('elapsed');}
+  return remaining>0;
+ };
+ if(update()){const interval=setInterval(()=>{if(!update())clearInterval(interval)},1000);}
+});
