@@ -49,3 +49,5 @@ All three pages have six complete localized versions, shared rendering and initi
 ## Predicted countdown
 
 The owner requested a predictive DMZ countdown after reviewing timing uncertainty. Its target is October 20, 2026 at 17:00 UTC (10:00 PDT; October 21 at 01:00 in Beijing and 02:00 in Tokyo/Seoul), based on the media estimate already discussed above. Every language labels it a prediction and links the timing source. Reaching zero must prompt an official-status check, never assert that DMZ is live. The browser also shows the visitor’s local date and zone. The owner requested local preview and a local commit only; do not push or trigger production publication until separately authorized.
+
+The owner approved a compact expired state: hide countdown digits, prediction detail and time rows after the target, keeping a short status message and official availability link. The homepage guide cards now follow the introductory facts, before other task cards, video and FAQ; the shared menu is labeled Guides (localized) and uses shorter task names. This remains local preview work with no push authorization.

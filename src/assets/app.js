@@ -23,7 +23,7 @@ document.querySelectorAll('[data-countdown]').forEach(timer=>{
   const values=[Math.floor(remaining/86400),Math.floor(remaining/3600)%24,Math.floor(remaining/60)%60,remaining%60];
   parts.forEach((part,n)=>part.textContent=String(values[n]).padStart(2,'0'));
   clock.hidden=false;
-  if(remaining===0){status.textContent=timer.dataset.reached;timer.classList.add('elapsed');}
+  if(remaining===0){clock.hidden=true;local.parentElement.hidden=true;status.textContent=timer.dataset.reached;timer.classList.add('elapsed');timer.querySelector('[data-countdown-source]').hidden=true;timer.querySelector('[data-countdown-official]').hidden=false;}
   return remaining>0;
  };
  if(update()){const interval=setInterval(()=>{if(!update())clearInterval(interval)},1000);}
